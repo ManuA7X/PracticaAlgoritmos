@@ -25,4 +25,24 @@ public abstract class Algoritmos {
             return 1;
         return numero * factorial(numero - 1);
     }
+    
+    /**
+     * Te dice si un numero es o no es primo
+     *
+     * @param numero 		Se verificara si el numero dado es primo
+     * @return 				true si el numero dado es primo, false si no lo es
+     */
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+    
+        for (int i = 2; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                return false; 
+            }
+        }
+        
+        return true; 
+    }
 }
